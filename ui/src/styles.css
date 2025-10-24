@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Discuz! 风格颜色变量定义 (HSL格式) */
+    --background: 220 13% 96%;
+    /* #F2F3F5 */
+    --foreground: 220 9% 26%;
+    /* #363D4D */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 9% 26%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 26%;
+
+    --primary: 210 50% 40%;
+    /* #336699 - 主要按钮和链接颜色 */
+    --primary-foreground: 0 0% 100%;
+    /* #FFFFFF */
+
+    --secondary: 210 33% 96%;
+    /* #F5FAFE - 浅蓝色背景 */
+    --secondary-foreground: 210 50% 40%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 28% 83%;
+    /* #CDD7E0 - 边框颜色 */
+    --input: 215 28% 83%;
+    --ring: 209 65% 40%;
+    /* #2366A8 - 焦点环颜色 */
+
+    --radius: 0.125rem;
+    /* 2px */
+
+    --discuz-border: #ccc;
+    --discuz-blue-dark: #2B7ACD;
+    --discuz-background: #fff;
+    --discuz-foreground: #333;
+    --discuz-primary: #2B7ACD;
+    --discuz-primary-foreground: #ffefff;
+    --discuz-secondary: #fff;
+    --discuz-secondary-foreground: #2B7ACD;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: auto;
+  }
+
+  .dark {
+    /* 您可以为暗色模式定义不同的 HSL 值 */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... etc */
+  }
+
+  /* * {
+    @apply border-border;
+  } */
+
+  body {
+    /* @apply bg-background text-foreground; */
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+
+  a {
+    @apply text-[#0066CC] no-underline hover:underline;
+  }
+
+  /* 新增：为 Tiptap 编辑器内容区定义样式 */
+  .tiptap {
+    @apply p-3 min-h-[200px] focus:outline-none text-base leading-relaxed;
+  }
+
+  .tiptap>*+* {
+    @apply mt-3;
+  }
+
+  .tiptap h1,
+  .tiptap h2,
+  .tiptap h3,
+  .tiptap h4,
+  .tiptap h5,
+  .tiptap h6 {
+    @apply font-bold leading-tight;
+  }
+
+  .tiptap h1 {
+    @apply text-2xl;
+  }
+
+  .tiptap h2 {
+    @apply text-xl;
+  }
+
+  .tiptap h3 {
+    @apply text-lg;
+  }
+
+  .tiptap p {
+    @apply m-0;
+  }
+
+  .tiptap ul,
+  .tiptap ol {
+    @apply pl-6;
+  }
+
+  .tiptap ul {
+    @apply list-disc;
+  }
+
+  .tiptap ol {
+    @apply list-decimal;
+  }
+
+  .tiptap blockquote {
+    @apply bg-gray-100 border-l-4 border-gray-300 p-2 my-2;
+  }
+
+  .tiptap img {
+    @apply max-w-full h-auto rounded-sm;
+  }
+
+  .tiptap a {
+    @apply text-blue-600 underline cursor-pointer;
+  }
+}
